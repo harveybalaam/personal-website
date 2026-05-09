@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/JetBrainsMono-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/JetBrainsMono-Italic.woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/JetBrainsMono-SemiBold.woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./assets/fonts/JetBrainsMono-SemiBoldItalic.woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+:root {
+  --main-bg: #211e2e;
+  --text-primary: #8e85a6;
+  --border-inactive: #8e85a6;
+  --border-inactive-25: rgba(109, 102, 128, 0.25);
+  --border-active: #59b2ff;
+  --border-hover: #86a4bf;
+  --accent-1: #b566ff;
+  --accent-2: #cdff59;
+  --accent-3: #ff5964;
+
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--main-bg);
+}
+
+html {
+  padding: 0;
+}
