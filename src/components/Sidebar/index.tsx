@@ -1,5 +1,9 @@
 import "./Sidebar.css";
 
-export default function Sidebar() {
-  return <></>;
+type SidebarProps = React.PropsWithChildren & {
+  title: string;
+};
+
+export default function Sidebar({ children, title }: SidebarProps) {
+  return <>{children}</>;
 }
