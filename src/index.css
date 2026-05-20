@@ -52,3 +52,40 @@ body {
 html {
   padding: 0;
 }
+
+.main-content {
+  display: grid;
+  grid-template-rows: 20fr 1fr;
+  grid-template-columns: 2fr 7fr;
+  column-gap: 0.75rem;
+  padding: 0.75rem;
+  height: calc(100vh - 1.5rem);
+}
+
+.container {
+  color: var(--border-inactive);
+  border: 0.2rem solid var(--border-inactive);
+  border-radius: 0.2rem;
+  padding: 0.75rem;
+}
+
+.container-inner {
+  margin: -2.5rem 0 0 0;
+  height: calc(100% + 2.5rem);
+}
+
+.container-title {
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.15rem;
+  line-height: 80%;
+  display: inline-block;
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: var(--main-bg);
+}
+
+.container-content,
+.container-content p {
+  padding: 0;
+  margin: 0;
+}

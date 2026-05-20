@@ -1,0 +1,44 @@
+.container.section-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  text-align: left;
+}
+
+.container.section-container:hover,
+.container.section-container:hover *,
+.container.section-container:focus,
+.container.section-container:focus * {
+  color: var(--border-hover);
+  border-color: var(--border-hover);
+  cursor: pointer;
+  outline: none;
+}
+
+.container.section-container.selected,
+.container.section-container.selected * {
+  color: var(--border-active);
+  border-color: var(--border-active);
+}
+
+h2.section-title {
+  margin: 0;
+  padding: 0;
+  color: var(--border-inactive);
+  font-weight: 500;
+}
+
+.icon-container {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+  padding: 0;
+  background-color: var(--border-inactive-25);
+  color: var(--border-inactive);
+}

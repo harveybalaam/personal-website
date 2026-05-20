@@ -1,0 +1,9 @@
+.container-content.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.page-link {
+  text-decoration: none;
+}

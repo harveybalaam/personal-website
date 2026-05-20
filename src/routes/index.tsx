@@ -6,5 +6,5 @@ export const Route = createFileRoute("/")({
 
 // eslint-disable-next-line react-refresh/only-export-components
 function Index() {
-  return <div>Home page</div>;
+  return <div>Hello page</div>;
 }

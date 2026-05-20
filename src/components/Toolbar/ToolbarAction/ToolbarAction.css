@@ -1,0 +1,14 @@
+.tool-tip-character {
+  color: var(--accent-1);
+  font-weight: bold;
+}
+
+.sound-on {
+  color: var(--accent-2);
+  font-weight: bold;
+}
+
+.sound-off {
+  color: var(--accent-3);
+  font-weight: bold;
+}
