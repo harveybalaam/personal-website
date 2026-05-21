@@ -17,8 +17,8 @@
   outline: none;
 }
 
-.container.section-container.selected,
-.container.section-container.selected * {
+.container.section-container.active,
+.container.section-container.active * {
   color: var(--border-active);
   border-color: var(--border-active);
 }

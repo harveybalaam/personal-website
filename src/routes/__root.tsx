@@ -21,35 +21,30 @@ function RootLayout() {
         <SidebarSection
           iconBefore={faHouse}
           route="/"
-          selected={true}
           setPageTitle={setPageTitle}
           title="Hello"
         />
         <SidebarSection
           iconBefore={faInfo}
           route="/about"
-          selected={false}
           setPageTitle={setPageTitle}
           title="About Me"
         />
         <SidebarSection
           iconBefore={faCode}
           route="/projects"
-          selected={false}
           setPageTitle={setPageTitle}
           title="Personal Projects"
         />
         <SidebarSection
           iconBefore={faBook}
           route="/digital-cv"
-          selected={false}
           setPageTitle={setPageTitle}
           title="Digital CV"
         />
         <SidebarSection
           iconBefore={faLink}
           route="/links"
-          selected={false}
           setPageTitle={setPageTitle}
           title="Links"
         />
