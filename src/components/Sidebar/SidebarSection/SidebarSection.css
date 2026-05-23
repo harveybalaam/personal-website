@@ -29,16 +29,3 @@ h2.section-title {
   color: var(--border-inactive);
   font-weight: 500;
 }
-
-.icon-container {
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.25rem;
-  padding: 0;
-  background-color: var(--border-inactive-25);
-  color: var(--border-inactive);
-}
