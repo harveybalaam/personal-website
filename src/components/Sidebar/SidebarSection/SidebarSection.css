@@ -1,4 +1,7 @@
 .container.section-container {
+  --section-active: var(--border);
+  --section-hover: var(--border);
+
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -7,25 +10,47 @@
   text-align: left;
 }
 
-.container.section-container:hover,
-.container.section-container:hover *,
-.container.section-container:focus,
-.container.section-container:focus * {
-  color: var(--border-hover);
-  border-color: var(--border-hover);
+.container.section-container:is(:hover, :focus),
+.container.section-container:is(:hover, :focus) * {
+  color: var(--section-hover);
+  border-color: var(--section-hover);
   cursor: pointer;
   outline: none;
 }
 
 .container.section-container.active,
 .container.section-container.active * {
-  color: var(--border-active);
-  border-color: var(--border-active);
+  color: var(--section-active);
+  border-color: var(--section-active);
+}
+
+.container.section-container.pink {
+  --section-active: var(--pink-active);
+  --section-hover: var(--pink-hover);
+}
+
+.container.section-container.purple {
+  --section-active: var(--purple-active);
+  --section-hover: var(--purple-hover);
+}
+
+.container.section-container.blue {
+  --section-active: var(--blue-active);
+  --section-hover: var(--blue-hover);
+}
+
+.container.section-container.green {
+  --section-active: var(--green-active);
+  --section-hover: var(--green-hover);
+}
+
+.container.section-container.yellow {
+  --section-active: var(--yellow-active);
+  --section-hover: var(--yellow-hover);
 }
 
 h2.section-title {
   margin: 0;
   padding: 0;
-  color: var(--border-inactive);
   font-weight: 500;
 }

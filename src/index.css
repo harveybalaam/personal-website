@@ -29,13 +29,26 @@
 :root {
   --main-bg: #211e2e;
   --text-primary: #8e85a6;
-  --border-inactive: #8e85a6;
-  --border-inactive-25: rgba(109, 102, 128, 0.25);
-  --border-active: #59b2ff;
-  --border-hover: #77abd9;
-  --accent-1: #b566ff;
-  --accent-2: #cdff59;
-  --accent-3: #ff5964;
+  --border: #8e85a6;
+  --border-25: rgba(109, 102, 128, 0.25);
+
+  --red-active: #ff6459;
+  --red-hover: #d97e77;
+
+  --pink-active: #ff599b;
+  --pink-hover: #d9779e;
+
+  --purple-active: #9470ff;
+  --purple-hover: #9077d9;
+
+  --blue-active: #59b2ff;
+  --blue-hover: #77abd9;
+
+  --green-active: #83ff59;
+  --green-hover: #90d977;
+
+  --yellow-active: #ffd359;
+  --yellow-hover: #d9bf77;
 
   font-family: "JetBrains Mono", ui-monospace, monospace;
   text-rendering: optimizeLegibility;
@@ -63,8 +76,8 @@ html {
 }
 
 .container {
-  color: var(--border-inactive);
-  border: 0.2rem solid var(--border-inactive);
+  color: var(--border);
+  border: 0.2rem solid var(--border);
   border-radius: 0.2rem;
   padding: 0.75rem;
 }
@@ -104,8 +117,8 @@ html {
   height: 2rem;
   border-radius: 0.25rem;
   padding: 0;
-  background-color: var(--border-inactive-25);
-  color: var(--border-inactive);
+  background-color: var(--border-25);
+  color: var(--border);
 }
 
 .icon-container.icon-container-lg {

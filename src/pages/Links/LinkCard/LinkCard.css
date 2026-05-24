@@ -1,9 +1,9 @@
 .link-card {
   display: flex;
   width: 40%;
-  border: 0.2rem solid var(--border-inactive);
+  border: 0.2rem solid var(--border);
   border-radius: 0.2rem;
-  color: var(--border-inactive);
+  color: var(--border);
   align-items: center;
   text-align: left;
   gap: 0.75rem;

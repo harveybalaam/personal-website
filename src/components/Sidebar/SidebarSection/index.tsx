@@ -7,6 +7,7 @@ interface SidebarSectionProps {
   iconBefore: IconProp;
   route: string;
   setPageTitle: React.Dispatch<React.SetStateAction<string>>;
+  theme: string;
   title: string;
 }
 
@@ -14,6 +15,7 @@ export default function SidebarSection({
   iconBefore,
   route,
   setPageTitle,
+  theme,
   title,
 }: SidebarSectionProps) {
   const handleClick = () => {
@@ -22,7 +24,7 @@ export default function SidebarSection({
 
   return (
     <Link
-      className="page-link container section-container"
+      className={`page-link container section-container ${theme}`}
       to={route}
       onClick={handleClick}
     >

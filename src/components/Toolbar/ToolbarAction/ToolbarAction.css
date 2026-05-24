@@ -1,14 +1,14 @@
 .tool-tip-character {
-  color: var(--accent-1);
+  color: var(--purple-active);
   font-weight: bold;
 }
 
 .sound-on {
-  color: var(--accent-2);
+  color: var(--green-active);
   font-weight: bold;
 }
 
 .sound-off {
-  color: var(--accent-3);
+  color: var(--red-active);
   font-weight: bold;
 }

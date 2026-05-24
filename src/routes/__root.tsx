@@ -22,30 +22,35 @@ function RootLayout() {
           iconBefore={faHouse}
           route="/"
           setPageTitle={setPageTitle}
+          theme="blue"
           title="Hello"
         />
         <SidebarSection
           iconBefore={faInfo}
           route="/about"
           setPageTitle={setPageTitle}
+          theme="pink"
           title="About Me"
         />
         <SidebarSection
           iconBefore={faCode}
           route="/projects"
           setPageTitle={setPageTitle}
+          theme="green"
           title="Personal Projects"
         />
         <SidebarSection
           iconBefore={faBook}
           route="/digital-cv"
           setPageTitle={setPageTitle}
+          theme="yellow"
           title="Digital CV"
         />
         <SidebarSection
           iconBefore={faLink}
           route="/links"
           setPageTitle={setPageTitle}
+          theme="purple"
           title="Links"
         />
       </Sidebar>
