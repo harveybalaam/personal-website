@@ -1,0 +1,28 @@
+.link-card {
+  display: flex;
+  width: 40%;
+  border: 0.2rem solid var(--border-inactive);
+  border-radius: 0.2rem;
+  color: var(--border-inactive);
+  align-items: center;
+  text-align: left;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+.link-card p,
+.link-card h3 {
+  margin: 0;
+}
+
+.link-card p {
+  font-style: italic;
+}
+
+.link-card:hover,
+.link-card:hover * {
+  color: #9077d9;
+  border-color: #9077d9;
+  stroke: #9077d9;
+}
