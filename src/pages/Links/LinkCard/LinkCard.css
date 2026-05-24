@@ -20,9 +20,10 @@
   font-style: italic;
 }
 
-.link-card:hover,
-.link-card:hover * {
+.link-card:is(:hover, :focus),
+.link-card:is(:hover, :focus) * {
   color: #9077d9;
   border-color: #9077d9;
-  stroke: #9077d9;
+  font-weight: bold;
+  outline: none;
 }
