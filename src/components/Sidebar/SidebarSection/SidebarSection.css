@@ -16,12 +16,14 @@
   border-color: var(--section-hover);
   cursor: pointer;
   outline: none;
+  font-weight: bold;
 }
 
 .container.section-container.active,
 .container.section-container.active * {
   color: var(--section-active);
   border-color: var(--section-active);
+  font-weight: bold;
 }
 
 .container.section-container.pink {
