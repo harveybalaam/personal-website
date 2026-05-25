@@ -11,19 +11,23 @@
   text-decoration: none;
 }
 
-.link-card p,
-.link-card h3 {
-  margin: 0;
-}
-
-.link-card p {
-  font-style: italic;
-}
-
 .link-card:is(:hover, :focus),
 .link-card:is(:hover, :focus) * {
   color: #9077d9;
   border-color: #9077d9;
-  font-weight: bold;
   outline: none;
+}
+
+.link-card-text > h3,
+.link-card-text > p {
+  margin: 0;
+}
+
+.link-card-text > h3 {
+  font-weight: bold;
+}
+
+.link-card:is(:hover, :focus) .link-card-text {
+  font-style: italic;
+  font-weight: bold;
 }
