@@ -9,7 +9,7 @@ export default function Links() {
       <div className="links-title centered">
         <img
           src={linksTitle}
-          alt="ASCII art page title stating 'More from Me'"
+          alt="ASCII art page title which reads 'More of Me'"
         />
       </div>
       <div className="links-container centered">
