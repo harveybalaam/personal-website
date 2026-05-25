@@ -17,6 +17,7 @@
   cursor: pointer;
   outline: none;
   font-weight: bold;
+  font-style: italic;
 }
 
 .container.section-container.active,
@@ -24,6 +25,7 @@
   color: var(--section-active);
   border-color: var(--section-active);
   font-weight: bold;
+  font-style: italic;
 }
 
 .container.section-container.pink {

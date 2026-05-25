@@ -14,14 +14,14 @@
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("./assets/fonts/JetBrainsMono-SemiBold.woff2");
+  src: url("./assets/fonts/JetBrainsMono-Bold.woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("./assets/fonts/JetBrainsMono-SemiBoldItalic.woff2");
+  src: url("./assets/fonts/JetBrainsMono-BoldItalic.woff2");
   font-weight: bold;
   font-style: italic;
 }
