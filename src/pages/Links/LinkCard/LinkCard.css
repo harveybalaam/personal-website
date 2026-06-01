@@ -1,6 +1,5 @@
 .link-card {
   display: flex;
-  width: 40%;
   border: 0.2rem solid var(--border);
   border-radius: 0.2rem;
   color: var(--border);
@@ -9,6 +8,7 @@
   gap: 0.75rem;
   padding: 0.75rem;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
 .link-card:is(:hover, :focus),
