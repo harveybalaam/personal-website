@@ -5,47 +5,65 @@ import {
   faInfo,
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet, useLocation } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import SidebarSection from "../components/Sidebar/SidebarSection";
 import Sidebar from "../components/Sidebar";
 import Toolbar from "../components/Toolbar";
-import { useState } from "react";
+
+const convertPathnameToTitle = (pathname: string) => {
+  switch (pathname) {
+    case "/":
+      return "Hello";
+    case "/about":
+      return "About Me";
+    case "/projects":
+      return "Personal Projects";
+    case "/digital-cv":
+      return "Digital CV";
+    case "/links":
+      return "Links";
+    default:
+      return "Hello";
+  }
+};
 
 // eslint-disable-next-line react-refresh/only-export-components
 function RootLayout() {
-  const [pageTitle, setPageTitle] = useState("Hello");
+  const location = useLocation();
+  const pageTitle = convertPathnameToTitle(location.pathname);
+
   return (
     <div className="main-content">
       <Sidebar title="Pages">
         <SidebarSection
           iconBefore={faHouse}
           route="/"
-          setPageTitle={setPageTitle}
+          theme="blue"
           title="Hello"
         />
         <SidebarSection
           iconBefore={faInfo}
           route="/about"
-          setPageTitle={setPageTitle}
+          theme="pink"
           title="About Me"
         />
         <SidebarSection
           iconBefore={faCode}
           route="/projects"
-          setPageTitle={setPageTitle}
+          theme="green"
           title="Personal Projects"
         />
         <SidebarSection
           iconBefore={faBook}
           route="/digital-cv"
-          setPageTitle={setPageTitle}
+          theme="yellow"
           title="Digital CV"
         />
         <SidebarSection
           iconBefore={faLink}
           route="/links"
-          setPageTitle={setPageTitle}
+          theme="purple"
           title="Links"
         />
       </Sidebar>

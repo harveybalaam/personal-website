@@ -20,7 +20,7 @@ export default function Toolbar() {
         href="https://github.com/harveybalaam"
       >
         <p>view source on GitHub</p>
-        <span className="icon-container-sm">
+        <span className="icon-container icon-container-sm">
           <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="sm" />
         </span>
       </a>
