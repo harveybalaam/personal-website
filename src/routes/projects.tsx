@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import PersonalProjects from "../pages/PersonalProjects";
 
 export const Route = createFileRoute("/projects")({
-  component: Projects,
+  component: PersonalProjects,
 });
-
-// eslint-disable-next-line react-refresh/only-export-components
-function Projects() {
-  return <div>Projects page</div>;
-}
