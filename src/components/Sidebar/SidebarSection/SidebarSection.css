@@ -28,6 +28,11 @@
   font-style: italic;
 }
 
+.container.section-container.orange {
+  --section-active: var(--orange-active);
+  --section-hover: var(--orange-hover);
+}
+
 .container.section-container.pink {
   --section-active: var(--pink-active);
   --section-hover: var(--pink-hover);
