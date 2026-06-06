@@ -6,6 +6,11 @@
   border-radius: 0.1rem;
 }
 
+.tag-orange {
+  background-color: var(--orange-active);
+  border: 0.1rem solid var(--orange-active);
+}
+
 .tag-red {
   background-color: var(--red-active);
   border: 0.1rem solid var(--red-active);
