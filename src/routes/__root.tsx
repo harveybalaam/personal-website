@@ -67,7 +67,7 @@ function RootLayout() {
           title="Links"
         />
       </Sidebar>
-      <div className="container page">
+      <div className="container border-default page">
         <div className="container-inner">
           <div className="container-title">
             <h3>{pageTitle}</h3>

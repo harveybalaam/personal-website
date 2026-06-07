@@ -6,7 +6,7 @@ interface SidebarProps extends React.PropsWithChildren {
 
 export default function Sidebar({ children, title }: SidebarProps) {
   return (
-    <div className="container sidebar">
+    <div className="container border-default sidebar">
       <div className="container-inner">
         <div className="container-title">
           <h3>{title}</h3>

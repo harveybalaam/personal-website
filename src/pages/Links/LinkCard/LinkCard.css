@@ -1,7 +1,5 @@
 .link-card {
   display: flex;
-  border: 0.15rem solid var(--border);
-  border-radius: 0.2rem;
   color: var(--border);
   align-items: flex-start;
   text-align: left;

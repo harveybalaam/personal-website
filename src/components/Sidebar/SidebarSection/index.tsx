@@ -18,7 +18,7 @@ export default function SidebarSection({
 }: SidebarSectionProps) {
   return (
     <Link
-      className={`page-link container section-container ${theme}`}
+      className={`page-link container border-default section-container ${theme}`}
       to={route}
     >
       <span className="icon-container">

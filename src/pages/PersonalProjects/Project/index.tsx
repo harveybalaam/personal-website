@@ -21,7 +21,7 @@ export default function Project({
   const [isCollapsed, setIsCollapsed] = useState(!isFeatured);
 
   return (
-    <div className="container project">
+    <div className="container border-default project">
       <button
         className="project-title"
         onClick={() => setIsCollapsed(!isCollapsed)}

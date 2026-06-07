@@ -78,10 +78,13 @@ html {
   height: calc(100vh - 1.5rem);
 }
 
-.container {
-  color: var(--border);
+.border-default {
   border: 0.15rem solid var(--border);
   border-radius: 0.2rem;
+}
+
+.container {
+  color: var(--border);
   padding: 0.75rem;
 }
 

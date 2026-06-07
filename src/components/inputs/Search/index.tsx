@@ -8,7 +8,7 @@ interface SearchProps {
 export default function Search({ searchValue, setSearchValue }: SearchProps) {
   return (
     <input
-      className="search"
+      className="search border-default"
       onChange={(e) => setSearchValue(e.target.value)}
       placeholder="Search projects..."
       type="search"
