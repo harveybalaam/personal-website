@@ -16,6 +16,18 @@
   margin: 0;
 }
 
+.project-featured {
+  border-color: var(--orange-active);
+}
+
+.project-featured > .project-title > h4 {
+  color: var(--orange-active);
+}
+
+.project-featured > .project-title > .icon-container {
+  color: var(--orange-active);
+}
+
 .project-body {
   display: flex;
   flex-direction: column;
