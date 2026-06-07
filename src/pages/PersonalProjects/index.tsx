@@ -1,4 +1,6 @@
 import Project from "./Project";
+import Search from "../../components/inputs/Search";
+import { useState } from "react";
 import "./PersonalProjects.css";
 
 interface Tag {
@@ -21,6 +23,8 @@ export interface Project {
 const projects: Project[] = [];
 
 export default function PersonalProjects() {
+  const [searchValue, setSearchValue] = useState("");
+
   const featuredProjects = projects.filter((project) => project.isFeatured);
   const hasFeaturedProjects = featuredProjects.length > 0;
 
@@ -28,7 +32,7 @@ export default function PersonalProjects() {
     <div className="projects">
       {hasFeaturedProjects && (
         <>
-          <h3 className="project-section-header">{`Featured Project${featuredProjects.length > 1 ? "s" : ""}`}</h3>
+          <h3 className="featured-projects-header">{`Featured Project${featuredProjects.length > 1 ? "s" : ""}`}</h3>
           {featuredProjects.map((project) => (
             <Project
               key={project.id}
@@ -45,9 +49,16 @@ export default function PersonalProjects() {
           ))}
         </>
       )}
-      <h3 className="project-section-header">All Projects</h3>
+      <h3>All Projects</h3>
+      <div className="projects-search-filter">
+        <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      </div>
       {projects
-        .filter((project) => !project.isFeatured)
+        .filter(
+          (project) =>
+            !project.isFeatured &&
+            project.title.toLowerCase().includes(searchValue.toLowerCase()),
+        )
         .map((project) => (
           <Project
             key={project.id}
