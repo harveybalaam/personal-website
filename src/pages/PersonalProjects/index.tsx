@@ -4,7 +4,15 @@ import { useState } from "react";
 import "./PersonalProjects.css";
 
 interface Tag {
-  colour?: "orange" | "red" | "pink" | "purple" | "blue" | "green" | "yellow";
+  colour?:
+    | "orange"
+    | "red"
+    | "pink"
+    | "purple"
+    | "blue"
+    | "teal"
+    | "green"
+    | "yellow";
   text: string;
 }
 
