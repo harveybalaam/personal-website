@@ -146,3 +146,9 @@ html {
   font-style: italic;
   font-size: 0.9rem;
 }
+
+.outline-blue:focus-visible {
+  outline: 0.15rem solid var(--blue-active);
+  outline-offset: 0.2rem;
+  border-radius: 0.1rem;
+}
