@@ -3,7 +3,7 @@ import Search from "../../components/inputs/Search";
 import { useState } from "react";
 import "./PersonalProjects.css";
 
-interface Tag {
+export interface Tag {
   colour?:
     | "orange"
     | "red"

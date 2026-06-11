@@ -1,9 +1,5 @@
+import type { Tag as TagProps } from "../../pages/PersonalProjects";
 import "./Tag.css";
-
-interface TagProps {
-  text: string;
-  colour?: string;
-}
 
 export default function Tag({ text, colour }: TagProps) {
   const tagColour = colour ?? "blue";
