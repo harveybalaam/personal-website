@@ -1,5 +1,6 @@
 .tag {
   color: var(--main-bg);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
   font-size: 0.85rem;
   font-weight: bold;
   padding: 0 0.75rem 0 0.75rem;
