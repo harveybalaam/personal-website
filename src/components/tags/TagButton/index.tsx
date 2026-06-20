@@ -1,5 +1,5 @@
 import type { MouseEvent } from "react";
-import type { Tag } from "../../pages/PersonalProjects";
+import type { Tag } from "../../../pages/PersonalProjects";
 import "./TagButton.css";
 
 interface TagButtonProps extends Tag {

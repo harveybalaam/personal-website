@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { type Project as ProjectProps } from "..";
 import "./Project.css";
-import Tag from "../../../components/Tag";
+import Tag from "../../../components/tags/Tag";
 
 export default function Project({
   concepts,

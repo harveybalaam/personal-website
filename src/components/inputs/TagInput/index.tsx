@@ -1,6 +1,6 @@
 import type { Tag } from "../../../pages/PersonalProjects";
-import TagButton from "../../TagButton";
-import TagRemovable from "../../TagRemovable";
+import TagButton from "../../tags/TagButton";
+import TagRemovable from "../../tags/TagRemovable";
 import { useEffect, useRef, useState } from "react";
 import "./TagInput.css";
 

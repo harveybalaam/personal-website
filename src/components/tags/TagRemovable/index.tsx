@@ -1,5 +1,5 @@
 import type { MouseEvent } from "react";
-import type { Tag } from "../../pages/PersonalProjects";
+import type { Tag } from "../../../pages/PersonalProjects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./TagRemovable.css";

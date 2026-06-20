@@ -1,4 +1,4 @@
-import type { Tag as TagProps } from "../../pages/PersonalProjects";
+import type { Tag as TagProps } from "../../../pages/PersonalProjects";
 import "./Tag.css";
 
 export default function Tag({ text, colour }: TagProps) {
