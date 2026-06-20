@@ -25,7 +25,7 @@ export default function Project({
       className={`container border-default ${isFeatured ? "project-featured" : ""}`}
     >
       <button
-        className="project-title"
+        className="project-title outline-blue"
         onClick={() => setIsCollapsed(!isCollapsed)}
       >
         <span className="icon-container icon-container-sm">
