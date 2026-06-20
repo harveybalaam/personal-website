@@ -43,8 +43,10 @@ const getUniqueTags = (projects: Project[]) => {
 };
 
 const hasIntersectingElements = (arr1: unknown[], arr2: unknown[]) => {
-  const set = new Set(arr1);
-  return arr2.some((element) => set.has(element));
+  const set1 = new Set(arr1);
+  const set2 = new Set(arr2);
+
+  return set2.intersection(set1).size > 0;
 };
 
 const projects: Project[] = [];
