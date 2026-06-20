@@ -1,5 +1,6 @@
 import Project from "./Project";
 import Search from "../../components/inputs/Search";
+import TagInput from "../../components/inputs/TagInput";
 import { useState } from "react";
 import "./PersonalProjects.css";
 
@@ -28,13 +29,58 @@ export interface Project {
   title: string;
 }
 
+const getUniqueTags = (projects: Project[]) => {
+  const allTags = projects.map((project) => project.tags).flat();
+  const seenTags = new Set();
+
+  return allTags.filter((tag) => {
+    if (seenTags.has(tag.text)) {
+      return;
+    }
+    seenTags.add(tag.text);
+    return tag;
+  });
+};
+
+const hasIntersectingElements = (arr1: unknown[], arr2: unknown[]) => {
+  const set = new Set(arr1);
+  return arr2.some((element) => set.has(element));
+};
+
 const projects: Project[] = [];
+
+const uniqueTags = getUniqueTags(projects);
+const featuredProjects = projects.filter((project) => project.isFeatured);
+const hasFeaturedProjects = featuredProjects.length > 0;
 
 export default function PersonalProjects() {
   const [searchValue, setSearchValue] = useState("");
+  const [tagsSearchValue, setTagsSearchValue] = useState("");
+  const [appliedTagFilters, setAppliedTagFilters] = useState<Tag[]>([]);
 
-  const featuredProjects = projects.filter((project) => project.isFeatured);
-  const hasFeaturedProjects = featuredProjects.length > 0;
+  const tagsSearchResult = uniqueTags.filter((tag) =>
+    tag.text.toLowerCase().includes(tagsSearchValue.toLowerCase()),
+  );
+
+  const getFilteredProjects = () => {
+    const appliedTagNames = appliedTagFilters.map((tag) => tag.text);
+
+    const filteredProjectsByTags =
+      appliedTagFilters.length === 0
+        ? projects
+        : projects.filter((project) =>
+            hasIntersectingElements(
+              project.tags.map((tag) => tag.text),
+              appliedTagNames,
+            ),
+          );
+
+    return filteredProjectsByTags.filter(
+      (project) =>
+        !project.isFeatured &&
+        project.title.toLowerCase().includes(searchValue.toLowerCase()),
+    );
+  };
 
   return (
     <div className="projects">
@@ -60,27 +106,27 @@ export default function PersonalProjects() {
       <h3>All Projects</h3>
       <div className="projects-search-filter">
         <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+        <TagInput
+          selectedTags={appliedTagFilters}
+          setSelectedTags={setAppliedTagFilters}
+          setTagsSearchValue={setTagsSearchValue}
+          tags={tagsSearchResult}
+        />
       </div>
-      {projects
-        .filter(
-          (project) =>
-            !project.isFeatured &&
-            project.title.toLowerCase().includes(searchValue.toLowerCase()),
-        )
-        .map((project) => (
-          <Project
-            key={project.id}
-            concepts={project.concepts}
-            description={project.description}
-            id={project.id}
-            isFeatured={project.isFeatured}
-            keyTakeaways={project.keyTakeaways}
-            link={project.link}
-            tags={project.tags}
-            technicalDetails={project.technicalDetails}
-            title={project.title}
-          />
-        ))}
+      {getFilteredProjects().map((project) => (
+        <Project
+          key={project.id}
+          concepts={project.concepts}
+          description={project.description}
+          id={project.id}
+          isFeatured={project.isFeatured}
+          keyTakeaways={project.keyTakeaways}
+          link={project.link}
+          tags={project.tags}
+          technicalDetails={project.technicalDetails}
+          title={project.title}
+        />
+      ))}
     </div>
   );
 }
