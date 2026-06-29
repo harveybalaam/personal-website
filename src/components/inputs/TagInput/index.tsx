@@ -1,7 +1,7 @@
 import type { Tag } from "../../../pages/PersonalProjects";
 import TagButton from "../../tags/TagButton";
 import TagRemovable from "../../tags/TagRemovable";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import "./TagInput.css";
 
 interface TagInputProps {
@@ -18,7 +18,19 @@ export default function TagInput({
   tags,
 }: TagInputProps) {
   const [isTagListOpen, setIsTagListOpen] = useState(false);
-  const tagInputRef = useRef<HTMLDivElement>(null);
+  const [focusedTagIndex, setFocusedTagIndex] = useState<number | null>(null);
+  const tagInputRef = useRef<HTMLInputElement>(null);
+  const tagListRef = useRef<HTMLDivElement>(null);
+
+  const selectedTagNames = selectedTags.map((tag) => tag.text);
+  const availableTags = tags.filter(
+    (tag) => !selectedTagNames.includes(tag.text),
+  );
+
+  const closeTagList = () => {
+    setIsTagListOpen(false);
+    setFocusedTagIndex(null);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -35,6 +47,80 @@ export default function TagInput({
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, [tagInputRef]);
+
+  useEffect(() => {
+    if (focusedTagIndex === null || !tagListRef?.current) return;
+
+    const tagListElements =
+      tagListRef.current.querySelectorAll("button.tag.tag-btn");
+
+    const tagToFocus = tagListElements?.[focusedTagIndex] as HTMLElement;
+
+    tagToFocus?.focus();
+  }, [focusedTagIndex, tagListRef]);
+
+  const handleInputOnKeyDown = (event: KeyboardEvent) => {
+    const { key } = event;
+
+    switch (key) {
+      case "ArrowUp":
+        if (!isTagListOpen) {
+          setIsTagListOpen(true);
+        }
+        setFocusedTagIndex(availableTags.length - 1);
+        break;
+      case "ArrowDown":
+        if (!isTagListOpen) {
+          setIsTagListOpen(true);
+        }
+        setFocusedTagIndex(0);
+        break;
+      case "Tab":
+        closeTagList();
+        break;
+      case "Escape":
+      case "Enter":
+        event.preventDefault();
+        closeTagList();
+        break;
+      default:
+        if (!isTagListOpen) setIsTagListOpen(true);
+        setFocusedTagIndex(null);
+    }
+  };
+
+  const handleTagListOnKeyDown = (event: KeyboardEvent) => {
+    const { key } = event;
+
+    switch (key) {
+      case "ArrowUp":
+        setFocusedTagIndex((prevIndex) => {
+          if (prevIndex === null || prevIndex === 0) {
+            return availableTags.length - 1;
+          }
+          return prevIndex - 1;
+        });
+        break;
+      case "ArrowDown":
+        setFocusedTagIndex((prevIndex) => {
+          if (prevIndex === null || prevIndex === availableTags.length - 1) {
+            return 0;
+          }
+          return prevIndex + 1;
+        });
+        break;
+      case "Escape":
+        event.preventDefault();
+        closeTagList();
+        tagInputRef?.current?.focus();
+        break;
+      case "Tab":
+        closeTagList();
+        break;
+      default:
+        return;
+    }
+  };
 
   const handleOnClick = () => {
     setIsTagListOpen(true);
@@ -53,13 +139,8 @@ export default function TagInput({
     setSelectedTags(selectedTags.filter((tag) => tag.text !== tagText));
   };
 
-  const selectedTagNames = selectedTags.map((tag) => tag.text);
-  const availableTags = tags.filter(
-    (tag) => !selectedTagNames.includes(tag.text),
-  );
-
   return (
-    <div className="tag-input" ref={tagInputRef}>
+    <div className="tag-input">
       <div className="border-default tag-input-container">
         {selectedTags.map((tag) => (
           <TagRemovable
@@ -73,13 +154,19 @@ export default function TagInput({
           name="tag-input"
           onChange={(e) => setTagsSearchValue(e.target.value)}
           onClick={handleOnClick}
+          onKeyDown={handleInputOnKeyDown}
           placeholder="Filter by tag..."
+          ref={tagInputRef}
           type="text"
         />
       </div>
       {isTagListOpen && (
         <div className="tag-input-dropdown-container">
-          <div className="border-default tag-input-dropdown-content">
+          <div
+            className="border-default tag-input-dropdown-content"
+            ref={tagListRef}
+            onKeyDown={handleTagListOnKeyDown}
+          >
             {availableTags.length > 0 ? (
               availableTags.map((tag) => (
                 <TagButton
