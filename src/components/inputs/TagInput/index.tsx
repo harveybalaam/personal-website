@@ -57,7 +57,7 @@ export default function TagInput({
     const tagToFocus = tagListElements?.[focusedTagIndex] as HTMLElement;
 
     tagToFocus?.focus();
-  }, [focusedTagIndex, tagListRef]);
+  }, [availableTags, focusedTagIndex, tagListRef]);
 
   const handleInputOnKeyDown = (event: KeyboardEvent) => {
     const { key } = event;
@@ -137,6 +137,32 @@ export default function TagInput({
 
   const handleRemoveTag = (tagText: Tag["text"]) => {
     setSelectedTags(selectedTags.filter((tag) => tag.text !== tagText));
+    tagInputRef?.current?.focus();
+  };
+
+  const handleTagButtonKeyDown = (
+    tagText: Tag["text"],
+    key: KeyboardEvent["key"],
+  ) => {
+    if (key !== "Enter") {
+      tagInputRef?.current?.focus();
+      return;
+    }
+
+    setFocusedTagIndex((prevIndex) => {
+      if (availableTags.length <= 1) {
+        tagInputRef?.current?.focus();
+        return null;
+      }
+
+      if (prevIndex === null) return 0;
+
+      if (prevIndex === availableTags.length - 1) return prevIndex - 1;
+
+      return prevIndex;
+    });
+
+    handleAddTag(tagText);
   };
 
   return (
@@ -172,6 +198,7 @@ export default function TagInput({
                 <TagButton
                   colour={tag.colour}
                   handleClick={handleAddTag}
+                  handleKeyDown={handleTagButtonKeyDown}
                   key={tag.text}
                   text={tag.text}
                 />
