@@ -16,7 +16,7 @@ export default function LinkCard({
   title,
 }: LinkCardProps) {
   return (
-    <a className="link-card" target="_blank" href={linksTo}>
+    <a className="link-card border-default" target="_blank" href={linksTo}>
       <span className="link-card-icon icon-container icon-container-lg">
         <FontAwesomeIcon icon={icon} size="2xl" />
       </span>

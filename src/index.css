@@ -32,6 +32,9 @@
   --border: #8e85a6;
   --border-25: rgba(109, 102, 128, 0.25);
 
+  --orange-active: #ff9059;
+  --orange-hover: #d99877;
+
   --red-active: #ff6459;
   --red-hover: #d97e77;
 
@@ -44,8 +47,11 @@
   --blue-active: #59b2ff;
   --blue-hover: #77abd9;
 
-  --green-active: #acff59;
-  --green-hover: #a8d977;
+  --teal-active: #59ffd6;
+  --teal-hover: #77d9c1;
+
+  --green-active: #d6ff59;
+  --green-hover: #c1d977;
 
   --yellow-active: #ffd359;
   --yellow-hover: #d9bf77;
@@ -75,10 +81,13 @@ html {
   height: calc(100vh - 1.5rem);
 }
 
+.border-default {
+  border: 0.15rem solid var(--border);
+  border-radius: 0.2rem;
+}
+
 .container {
   color: var(--border);
-  border: 0.2rem solid var(--border);
-  border-radius: 0.2rem;
   padding: 0.75rem;
 }
 
@@ -131,4 +140,15 @@ html {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 0.2rem;
+}
+
+.italic-sm {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.outline-blue:focus-visible {
+  outline: 0.15rem solid var(--blue-active);
+  outline-offset: 0.2rem;
+  border-radius: 0.1rem;
 }

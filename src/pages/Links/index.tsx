@@ -13,7 +13,7 @@ export default function Links() {
         />
       </div>
       <div className="links centered">
-        <div className="container links-container centered">
+        <div className="container border-default links-container centered">
           <LinkCard
             description="Connect with me"
             icon={faSquareLinkedin}

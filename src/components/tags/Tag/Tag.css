@@ -1,0 +1,48 @@
+.tag {
+  color: var(--main-bg);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 0 0.75rem 0 0.75rem;
+  border-radius: 0.1rem;
+}
+
+.tag-orange {
+  background-color: var(--orange-active);
+  border: 0.1rem solid var(--orange-active);
+}
+
+.tag-red {
+  background-color: var(--red-active);
+  border: 0.1rem solid var(--red-active);
+}
+
+.tag-pink {
+  background-color: var(--pink-active);
+  border: 0.1rem solid var(--pink-active);
+}
+
+.tag-purple {
+  background-color: var(--purple-active);
+  border: 0.1rem solid var(--purple-active);
+}
+
+.tag-blue {
+  background-color: var(--blue-active);
+  border: 0.1rem solid var(--blue-active);
+}
+
+.tag-teal {
+  background-color: var(--teal-active);
+  border: 0.1rem solid var(--teal-active);
+}
+
+.tag-green {
+  background-color: var(--green-active);
+  border: 0.1rem solid var(--green-active);
+}
+
+.tag-yellow {
+  background-color: var(--yellow-active);
+  border: 0.1rem solid var(--yellow-active);
+}
