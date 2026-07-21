@@ -7,23 +7,26 @@ import "./TagInput.css";
 interface TagInputProps {
   selectedTags: Tag[];
   setSelectedTags: React.Dispatch<React.SetStateAction<Tag[]>>;
-  setTagsSearchValue: React.Dispatch<React.SetStateAction<string>>;
   tags: Tag[];
 }
 
 export default function TagInput({
   selectedTags,
   setSelectedTags,
-  setTagsSearchValue,
   tags,
 }: TagInputProps) {
   const [isTagListOpen, setIsTagListOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
   const [focusedTagIndex, setFocusedTagIndex] = useState<number | null>(null);
   const tagInputRef = useRef<HTMLInputElement>(null);
   const tagListRef = useRef<HTMLDivElement>(null);
 
+  const filteredTagsBySearch = tags.filter((tag) =>
+    tag.text.toLowerCase().includes(searchValue.toLowerCase()),
+  );
+
   const selectedTagNames = selectedTags.map((tag) => tag.text);
-  const availableTags = tags.filter(
+  const availableTags = filteredTagsBySearch.filter(
     (tag) => !selectedTagNames.includes(tag.text),
   );
 
@@ -178,7 +181,7 @@ export default function TagInput({
         ))}
         <input
           name="tag-input"
-          onChange={(e) => setTagsSearchValue(e.target.value)}
+          onChange={(e) => setSearchValue(e.target.value)}
           onClick={handleOnClick}
           onKeyDown={handleInputOnKeyDown}
           placeholder="Filter by tag..."

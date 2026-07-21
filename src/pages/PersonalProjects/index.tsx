@@ -57,12 +57,7 @@ const hasFeaturedProjects = featuredProjects.length > 0;
 
 export default function PersonalProjects() {
   const [searchValue, setSearchValue] = useState("");
-  const [tagsSearchValue, setTagsSearchValue] = useState("");
   const [appliedTagFilters, setAppliedTagFilters] = useState<Tag[]>([]);
-
-  const tagsSearchResult = uniqueTags.filter((tag) =>
-    tag.text.toLowerCase().includes(tagsSearchValue.toLowerCase()),
-  );
 
   const getFilteredProjects = () => {
     const appliedTagNames = appliedTagFilters.map((tag) => tag.text);
@@ -113,8 +108,7 @@ export default function PersonalProjects() {
         <TagInput
           selectedTags={appliedTagFilters}
           setSelectedTags={setAppliedTagFilters}
-          setTagsSearchValue={setTagsSearchValue}
-          tags={tagsSearchResult}
+          tags={uniqueTags}
         />
       </div>
       {filteredProjects.length > 0 ? (
