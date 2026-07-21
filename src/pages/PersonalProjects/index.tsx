@@ -84,6 +84,8 @@ export default function PersonalProjects() {
     );
   };
 
+  const filteredProjects = getFilteredProjects();
+
   return (
     <div className="projects">
       {hasFeaturedProjects && (
@@ -115,20 +117,26 @@ export default function PersonalProjects() {
           tags={tagsSearchResult}
         />
       </div>
-      {getFilteredProjects().map((project) => (
-        <Project
-          key={project.id}
-          concepts={project.concepts}
-          description={project.description}
-          id={project.id}
-          isFeatured={project.isFeatured}
-          keyTakeaways={project.keyTakeaways}
-          link={project.link}
-          tags={project.tags}
-          technicalDetails={project.technicalDetails}
-          title={project.title}
-        />
-      ))}
+      {filteredProjects.length > 0 ? (
+        filteredProjects.map((project) => (
+          <Project
+            key={project.id}
+            concepts={project.concepts}
+            description={project.description}
+            id={project.id}
+            isFeatured={project.isFeatured}
+            keyTakeaways={project.keyTakeaways}
+            link={project.link}
+            tags={project.tags}
+            technicalDetails={project.technicalDetails}
+            title={project.title}
+          />
+        ))
+      ) : (
+        <div className="centered">
+          <p>No projects matched your search criteria</p>
+        </div>
+      )}
     </div>
   );
 }
