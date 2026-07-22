@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import Hello from "../pages/Hello";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: Hello,
 });
-
-// eslint-disable-next-line react-refresh/only-export-components
-function Index() {
-  return <div>Hello page</div>;
-}
