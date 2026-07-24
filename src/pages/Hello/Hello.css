@@ -1,0 +1,18 @@
+.hello-title {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.hello-title > img {
+  max-width: 40%;
+}
+
+.hello-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hello-body > p {
+  max-width: 75%;
+  font-size: 1.1rem;
+}
