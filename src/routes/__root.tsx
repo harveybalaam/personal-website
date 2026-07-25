@@ -7,8 +7,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { createRootRoute, Outlet, useLocation } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import Container from "../components/Container";
 import SidebarSection from "../components/Sidebar/SidebarSection";
-import Sidebar from "../components/Sidebar";
 import Toolbar from "../components/Toolbar";
 
 const convertPathnameToTitle = (pathname: string) => {
@@ -35,7 +35,7 @@ function RootLayout() {
 
   return (
     <div className="main-content">
-      <Sidebar title="Pages">
+      <Container title="Pages" isSidebar>
         <SidebarSection
           iconBefore={faHouse}
           route="/"
@@ -66,17 +66,10 @@ function RootLayout() {
           theme="purple"
           title="Links"
         />
-      </Sidebar>
-      <div className="container border-default page">
-        <div className="container-inner">
-          <div className="container-title">
-            <h3>{pageTitle}</h3>
-          </div>
-          <div className="container-content">
-            <Outlet />
-          </div>
-        </div>
-      </div>
+      </Container>
+      <Container title={pageTitle}>
+        <Outlet />
+      </Container>
       <Toolbar />
       <TanStackRouterDevtools />
     </div>
