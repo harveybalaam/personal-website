@@ -1,10 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import DigitalCV from "../pages/DigitalCV";
 
 export const Route = createFileRoute("/digital-cv")({
   component: DigitalCV,
 });
-
-// eslint-disable-next-line react-refresh/only-export-components
-function DigitalCV() {
-  return <div>CV page</div>;
-}
