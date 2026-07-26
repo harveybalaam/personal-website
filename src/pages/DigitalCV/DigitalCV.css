@@ -1,0 +1,29 @@
+.cv-content-wrapper {
+  margin: 0.75rem;
+  height: calc(90vh - 3rem);
+  overflow-y: scroll;
+}
+
+.cv-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.cv-content-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 86rem) {
+  .cv-content-row {
+    flex-direction: row;
+  }
+}
+
+.cv-content .container {
+  flex: 1 1 0;
+}
