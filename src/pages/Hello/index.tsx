@@ -4,7 +4,7 @@ import "./Hello.css";
 
 export default function Hello() {
   return (
-    <>
+    <div className="page-content-wrapper hello-page">
       <div className="hello-title centered">
         <img src={helloTitle} alt="ASCII art page title which reads 'Hello!'" />
       </div>
@@ -31,6 +31,6 @@ export default function Hello() {
         </p>
         <p id="copyright">&copy; 2026 Harvey Balaam</p>
       </div>
-    </>
+    </div>
   );
 }
