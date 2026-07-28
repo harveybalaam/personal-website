@@ -1,15 +1,15 @@
-interface ExperienceProps extends React.PropsWithChildren {
+interface SectionProps extends React.PropsWithChildren {
   date: string;
   location: string;
   role?: string;
 }
 
-export default function Experience({
+export default function Section({
   date,
   children,
   location,
   role,
-}: ExperienceProps) {
+}: SectionProps) {
   return (
     <div>
       <div className="header">

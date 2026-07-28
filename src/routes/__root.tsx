@@ -19,8 +19,8 @@ const convertPathnameToTitle = (pathname: string) => {
       return "About Me";
     case "/projects":
       return "Personal Projects";
-    case "/digital-cv":
-      return "Digital CV";
+    case "/experience":
+      return "Experience";
     case "/links":
       return "Links";
     default:
@@ -56,9 +56,9 @@ function RootLayout() {
         />
         <SidebarSection
           iconBefore={faBook}
-          route="/digital-cv"
+          route="/experience"
           theme="yellow"
-          title="Digital CV"
+          title="Experience"
         />
         <SidebarSection
           iconBefore={faLink}

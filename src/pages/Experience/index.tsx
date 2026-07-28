@@ -1,38 +1,38 @@
 import Container from "../../components/Container";
-import Experience from "./Experience";
-import "./DigitalCV.css";
+import Section from "./Section";
+import "./Experience.css";
 
-export default function DigitalCV() {
+export default function Experience() {
   return (
     <div className="cv-content-wrapper">
       <div className="cv-content">
         <div className="cv-content-row">
-          <Container title="Experience">
+          <Container title="Roles">
             <div className="cv-content-section">
-              <Experience
+              <Section
                 date="Dec 2025 - present"
                 location="Pimberly"
                 role="Junior Developer"
-              ></Experience>
-              <Experience
+              ></Section>
+              <Section
                 date="Oct 2024 - Jun 2025"
                 location="Durham University"
                 role="Demonstrator"
-              ></Experience>
+              ></Section>
             </div>
           </Container>
         </div>
         <div className="cv-content-row">
           <Container title="Education">
             <div className="cv-content-section">
-              <Experience
+              <Section
                 date="Oct 2022 - Jul 2025"
                 location="Durham University"
-              ></Experience>
-              <Experience
+              ></Section>
+              <Section
                 date="Sep 2019 - Jul 2021"
                 location="Brine Leas Sixth Form"
-              ></Experience>
+              ></Section>
             </div>
           </Container>
           <Container title="Skills & Certifications">
@@ -42,16 +42,16 @@ export default function DigitalCV() {
         <div className="cv-content-row">
           <Container title="Volunteer Roles & Other Experience">
             <div className="cv-content-section">
-              <Experience
+              <Section
                 date="Oct 2022 - Jun 2025"
                 location="Durham Students' Union"
                 role="Course Representative"
-              ></Experience>
-              <Experience
+              ></Section>
+              <Section
                 date="May 2023 - Nov 2024"
                 location="St Aidan's JCR CIO, Durham University"
                 role="Tech Chair"
-              ></Experience>
+              ></Section>
             </div>
           </Container>
         </div>
