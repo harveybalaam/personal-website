@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as LinksRouteImport } from './routes/links'
-import { Route as DigitalCvRouteImport } from './routes/digital-cv'
+import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -25,9 +25,9 @@ const LinksRoute = LinksRouteImport.update({
   path: '/links',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DigitalCvRoute = DigitalCvRouteImport.update({
-  id: '/digital-cv',
-  path: '/digital-cv',
+const ExperienceRoute = ExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -44,14 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/digital-cv': typeof DigitalCvRoute
+  '/experience': typeof ExperienceRoute
   '/links': typeof LinksRoute
   '/projects': typeof ProjectsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/digital-cv': typeof DigitalCvRoute
+  '/experience': typeof ExperienceRoute
   '/links': typeof LinksRoute
   '/projects': typeof ProjectsRoute
 }
@@ -59,22 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/digital-cv': typeof DigitalCvRoute
+  '/experience': typeof ExperienceRoute
   '/links': typeof LinksRoute
   '/projects': typeof ProjectsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/digital-cv' | '/links' | '/projects'
+  fullPaths: '/' | '/about' | '/experience' | '/links' | '/projects'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/digital-cv' | '/links' | '/projects'
-  id: '__root__' | '/' | '/about' | '/digital-cv' | '/links' | '/projects'
+  to: '/' | '/about' | '/experience' | '/links' | '/projects'
+  id: '__root__' | '/' | '/about' | '/experience' | '/links' | '/projects'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  DigitalCvRoute: typeof DigitalCvRoute
+  ExperienceRoute: typeof ExperienceRoute
   LinksRoute: typeof LinksRoute
   ProjectsRoute: typeof ProjectsRoute
 }
@@ -95,11 +95,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LinksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/digital-cv': {
-      id: '/digital-cv'
-      path: '/digital-cv'
-      fullPath: '/digital-cv'
-      preLoaderRoute: typeof DigitalCvRouteImport
+    '/experience': {
+      id: '/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof ExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -122,7 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  DigitalCvRoute: DigitalCvRoute,
+  ExperienceRoute: ExperienceRoute,
   LinksRoute: LinksRoute,
   ProjectsRoute: ProjectsRoute,
 }

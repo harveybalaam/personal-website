@@ -28,8 +28,8 @@
 
 :root {
   --main-bg: #211e2e;
-  --text-primary: #8e85a6;
-  --border: #8e85a6;
+  --text-primary: #988fb3;
+  --border: #988fb3;
   --border-25: rgba(109, 102, 128, 0.25);
 
   --orange-active: #ff9059;
@@ -89,27 +89,6 @@ html {
 .container {
   color: var(--border);
   padding: 0.75rem;
-}
-
-.container-inner {
-  margin: -2.5rem 0 0 0;
-  height: calc(100% + 2.5rem);
-}
-
-.container-title {
-  font-weight: bold;
-  font-style: italic;
-  letter-spacing: 0.15rem;
-  line-height: 80%;
-  display: inline-block;
-  padding: 0 0.5rem 0 0.5rem;
-  background-color: var(--main-bg);
-}
-
-.container-content,
-.container-content p {
-  padding: 0;
-  margin: 0;
 }
 
 .centered {
