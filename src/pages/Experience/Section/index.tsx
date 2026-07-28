@@ -1,3 +1,5 @@
+import "./Section.css";
+
 interface SectionProps extends React.PropsWithChildren {
   date: string;
   location: string;
