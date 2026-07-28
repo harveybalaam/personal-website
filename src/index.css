@@ -81,6 +81,12 @@ html {
   height: calc(100vh - 1.5rem);
 }
 
+.page-content-wrapper {
+  margin: 0.75rem;
+  height: calc(90vh - 3rem);
+  overflow-y: scroll;
+}
+
 .border-default {
   border: 0.15rem solid var(--border);
   border-radius: 0.2rem;
@@ -130,4 +136,14 @@ html {
   outline: 0.15rem solid var(--blue-active);
   outline-offset: 0.2rem;
   border-radius: 0.1rem;
+}
+
+.text-link {
+  text-decoration: none;
+  color: var(--blue-active);
+}
+
+.text-link:is(:hover, :focus) {
+  font-weight: bold;
+  font-style: italic;
 }

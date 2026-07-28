@@ -4,7 +4,7 @@ import "./Experience.css";
 
 export default function Experience() {
   return (
-    <div className="cv-content-wrapper">
+    <div className="page-content-wrapper">
       <div className="cv-content">
         <div className="cv-content-row">
           <Container title="Roles">

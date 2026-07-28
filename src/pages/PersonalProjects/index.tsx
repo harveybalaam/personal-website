@@ -82,7 +82,7 @@ export default function PersonalProjects() {
   const filteredProjects = getFilteredProjects();
 
   return (
-    <div className="projects">
+    <div className="page-content-wrapper projects">
       {hasFeaturedProjects && (
         <>
           <h3 className="featured-projects-header">{`Featured Project${featuredProjects.length > 1 ? "s" : ""}`}</h3>

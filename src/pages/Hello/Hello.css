@@ -1,0 +1,29 @@
+#copyright {
+  font-size: 0.85rem;
+}
+
+.hello-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.hello-title {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.hello-title > img {
+  max-width: 40%;
+}
+
+.hello-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.hello-body > p {
+  max-width: 75%;
+  font-size: 1.1rem;
+}
