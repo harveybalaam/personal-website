@@ -26,8 +26,6 @@ export default function Hello() {
           just functional, but also enjoyable to interact with. While I&apos;m
           not sure this site will ever be &quot;done&quot;, I hope you feel that
           I am at least heading in that direction! :)
-          <br />
-          <br />
         </p>
         <p id="copyright">&copy; 2026 Harvey Balaam</p>
       </div>
