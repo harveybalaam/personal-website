@@ -23,8 +23,9 @@ a.link {
   text-decoration: none;
 }
 
-a.link:hover,
-a.link:hover * {
+a.link:is(:hover, :focus-visible),
+a.link:is(:hover, :focus-visible) * {
   color: var(--blue-hover);
   font-weight: bold;
+  font-style: italic;
 }

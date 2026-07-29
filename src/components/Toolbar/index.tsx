@@ -15,7 +15,7 @@ export default function Toolbar() {
         <ToolbarAction actionCharacter="t" actionName="theme" value="dark" />
       </div>
       <a
-        className="link"
+        className="link outline-blue"
         target="_blank"
         href="https://github.com/harveybalaam"
       >
