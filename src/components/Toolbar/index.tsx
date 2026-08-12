@@ -11,7 +11,7 @@ export default function Toolbar() {
       <a
         className="link"
         target="_blank"
-        href="https://github.com/harveybalaam"
+        href="https://github.com/harveybalaam/personal-website"
       >
         <p>view source on GitHub</p>
         <span className="icon-container icon-container-sm">
