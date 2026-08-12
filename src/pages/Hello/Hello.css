@@ -13,7 +13,9 @@
 }
 
 .hello-title > img {
-  max-width: 40%;
+  height: 8rem;
+  width: auto;
+  max-width: 60%;
 }
 
 .hello-body {
