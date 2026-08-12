@@ -1,0 +1,32 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-title {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.about-title > img {
+  width: auto;
+  height: 8rem;
+  max-width: 60%;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  align-self: center;
+}
+
+.about-body .container-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h4.about-subheading {
+  margin: 0 0 0.5rem 0;
+}
