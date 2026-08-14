@@ -18,15 +18,14 @@ export interface Tag {
 }
 
 export interface Project {
-  concepts: string[];
   description: string;
   id: number;
   isFeatured: boolean;
   keyTakeaways: string;
   link?: string;
   tags: Tag[];
-  technicalDetails: string[];
   title: string;
+  toolsAndConcepts: string[];
 }
 
 const getUniqueTags = (projects: Project[]) => {
@@ -89,15 +88,14 @@ export default function PersonalProjects() {
           {featuredProjects.map((project) => (
             <Project
               key={project.id}
-              concepts={project.concepts}
               description={project.description}
               id={project.id}
               isFeatured={project.isFeatured}
               keyTakeaways={project.keyTakeaways}
               link={project.link}
               tags={project.tags}
-              technicalDetails={project.technicalDetails}
               title={project.title}
+              toolsAndConcepts={project.toolsAndConcepts}
             />
           ))}
         </>
@@ -115,15 +113,14 @@ export default function PersonalProjects() {
         filteredProjects.map((project) => (
           <Project
             key={project.id}
-            concepts={project.concepts}
             description={project.description}
             id={project.id}
             isFeatured={project.isFeatured}
             keyTakeaways={project.keyTakeaways}
             link={project.link}
             tags={project.tags}
-            technicalDetails={project.technicalDetails}
             title={project.title}
+            toolsAndConcepts={project.toolsAndConcepts}
           />
         ))
       ) : (
