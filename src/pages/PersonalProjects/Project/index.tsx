@@ -9,14 +9,13 @@ import "./Project.css";
 import Tag from "../../../components/tags/Tag";
 
 export default function Project({
-  concepts,
   description,
   isFeatured,
   keyTakeaways,
   link,
   tags,
-  technicalDetails,
   title,
+  toolsAndConcepts,
 }: ProjectProps) {
   const [isCollapsed, setIsCollapsed] = useState(!isFeatured);
 
@@ -47,12 +46,8 @@ export default function Project({
             ))}
           </div>
           <div>
-            <h4>Key Concepts</h4>
-            <span className="list-details">{concepts.join(" | ")}</span>
-          </div>
-          <div>
-            <h4>Technologies Used</h4>
-            <span className="list-details">{technicalDetails.join(" | ")}</span>
+            <h4>Key Tools &amp; Concepts</h4>
+            <span className="list-details">{toolsAndConcepts.join(" | ")}</span>
           </div>
           <div>
             <h4>Project Overview</h4>
