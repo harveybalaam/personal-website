@@ -17,15 +17,15 @@
 }
 
 .project-featured {
-  border-color: var(--orange-active);
+  border-color: var(--peach);
 }
 
 .project-featured > .project-title > h4 {
-  color: var(--orange-active);
+  color: var(--peach);
 }
 
 .project-featured > .project-title > .icon-container {
-  color: var(--orange-active);
+  color: var(--peach);
 }
 
 .project-body {
@@ -54,18 +54,18 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--orange-hover);
+  color: oklch(from var(--peach) l c h / 75%);
   cursor: pointer;
   padding: 0.15rem 0.5rem 0.15rem 0.5rem;
   width: fit-content;
   border-radius: 0.25rem;
-  border: 0.1rem solid var(--orange-hover);
+  border: 0.1rem solid oklch(from var(--peach) l c h / 75%);
   text-decoration: none;
 }
 
 .project-link:hover {
-  color: var(--orange-active);
-  border: 0.1rem solid var(--orange-active);
+  color: var(--peach);
+  border: 0.1rem solid var(--peach);
   font-weight: bold;
   font-style: italic;
 }

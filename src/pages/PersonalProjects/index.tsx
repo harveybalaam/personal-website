@@ -6,7 +6,7 @@ import "./PersonalProjects.css";
 
 export interface Tag {
   colour?:
-    | "orange"
+    | "peach"
     | "red"
     | "pink"
     | "purple"
@@ -74,7 +74,7 @@ const projects: Project[] = [
     isFeatured: false,
     tags: [
       { colour: "yellow", text: "Python" },
-      { colour: "orange", text: "ML" },
+      { colour: "peach", text: "ML" },
       { colour: "pink", text: "Data Science" },
       { colour: "blue", text: "TUI" },
     ],

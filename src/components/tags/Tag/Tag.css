@@ -7,42 +7,42 @@
   border-radius: 0.1rem;
 }
 
-.tag-orange {
-  background-color: var(--orange-active);
-  border: 0.1rem solid var(--orange-active);
+.tag-peach {
+  background-color: var(--peach);
+  border: 0.1rem solid var(--peach);
 }
 
 .tag-red {
-  background-color: var(--red-active);
-  border: 0.1rem solid var(--red-active);
+  background-color: var(--red);
+  border: 0.1rem solid var(--red);
 }
 
 .tag-pink {
-  background-color: var(--pink-active);
-  border: 0.1rem solid var(--pink-active);
+  background-color: var(--pink);
+  border: 0.1rem solid var(--pink);
 }
 
 .tag-purple {
-  background-color: var(--purple-active);
-  border: 0.1rem solid var(--purple-active);
+  background-color: var(--mauve);
+  border: 0.1rem solid var(--mauve);
 }
 
 .tag-blue {
-  background-color: var(--blue-active);
-  border: 0.1rem solid var(--blue-active);
+  background-color: var(--blue);
+  border: 0.1rem solid var(--blue);
 }
 
 .tag-teal {
-  background-color: var(--teal-active);
-  border: 0.1rem solid var(--teal-active);
+  background-color: var(--sky);
+  border: 0.1rem solid var(--sky);
 }
 
 .tag-green {
-  background-color: var(--green-active);
-  border: 0.1rem solid var(--green-active);
+  background-color: var(--green);
+  border: 0.1rem solid var(--green);
 }
 
 .tag-yellow {
-  background-color: var(--yellow-active);
-  border: 0.1rem solid var(--yellow-active);
+  background-color: var(--yellow);
+  border: 0.1rem solid var(--yellow);
 }

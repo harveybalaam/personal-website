@@ -51,7 +51,7 @@ function RootLayout() {
         <SidebarSection
           iconBefore={faCode}
           route="/projects"
-          theme="orange"
+          theme="peach"
           title="Personal Projects"
         />
         <SidebarSection

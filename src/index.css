@@ -1,3 +1,5 @@
+@import "./assets/styles/colours.css";
+
 @font-face {
   font-family: "JetBrains Mono";
   src: url("./assets/fonts/JetBrainsMono-Regular.woff2");
@@ -27,35 +29,6 @@
 }
 
 :root {
-  --main-bg: #211e2e;
-  --text-primary: #988fb3;
-  --border: #988fb3;
-  --border-25: rgba(109, 102, 128, 0.25);
-
-  --orange-active: #ff9059;
-  --orange-hover: #d99877;
-
-  --red-active: #ff6459;
-  --red-hover: #d97e77;
-
-  --pink-active: #ff599b;
-  --pink-hover: #d9779e;
-
-  --purple-active: #9470ff;
-  --purple-hover: #9077d9;
-
-  --blue-active: #59b2ff;
-  --blue-hover: #77abd9;
-
-  --teal-active: #59ffd6;
-  --teal-hover: #77d9c1;
-
-  --green-active: #d6ff59;
-  --green-hover: #c1d977;
-
-  --yellow-active: #ffd359;
-  --yellow-hover: #d9bf77;
-
   font-family: "JetBrains Mono", ui-monospace, monospace;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -93,7 +66,7 @@ html {
 }
 
 .container {
-  color: var(--border);
+  color: var(--text-secondary);
   padding: 0.75rem;
 }
 
@@ -111,7 +84,7 @@ html {
   height: 2rem;
   border-radius: 0.25rem;
   padding: 0;
-  background-color: var(--border-25);
+  background-color: oklch(from var(--border) l c h / 15%);
   color: var(--border);
 }
 
@@ -133,14 +106,14 @@ html {
 }
 
 .outline-blue:focus-visible {
-  outline: 0.15rem solid var(--blue-active);
+  outline: 0.15rem solid var(--sky);
   outline-offset: 0.2rem;
   border-radius: 0.1rem;
 }
 
 .text-link {
   text-decoration: none;
-  color: var(--blue-active);
+  color: var(--sky);
 }
 
 .text-link:is(:hover, :focus) {
