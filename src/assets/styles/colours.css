@@ -1,0 +1,38 @@
+:root {
+  /* Catppuccin Macchiato */
+  /* https://catppuccin.com/palette */
+
+  --rosewater: oklch(0.911 0.029 31.133);
+  --flamingo: oklch(0.863 0.048 18.12);
+  --pink: oklch(0.861 0.083 336.18);
+  --mauve: oklch(0.772 0.126 303.898);
+  --red: oklch(0.737 0.125 11.194);
+  --maroon: oklch(0.77 0.102 14.371);
+  --peach: oklch(0.799 0.106 49.638);
+  --yellow: oklch(0.879 0.074 84.751);
+  --green: oklch(0.835 0.108 138.15);
+  --teal: oklch(0.821 0.076 184.1);
+  --sky: oklch(0.837 0.072 209.366);
+  --sapphire: oklch(0.785 0.085 228.378);
+  --blue: oklch(0.75 0.11 263.81);
+  --lavender: oklch(0.814 0.083 279.854);
+  --text: oklch(0.871 0.048 273.665);
+  --subtext-1: oklch(0.812 0.046 274.267);
+  --subtext-0: oklch(0.751 0.044 273.533);
+  --overlay-2: oklch(0.69 0.043 274.539);
+  --overlay-1: oklch(0.627 0.041 273.733);
+  --overlay-0: oklch(0.561 0.041 276.475);
+  --surface-2: oklch(0.494 0.039 275.683);
+  --surface-1: oklch(0.426 0.039 276.948);
+  --surface-0: oklch(0.354 0.037 275.985);
+  --base: oklch(0.279 0.035 276.937);
+  --mantle: oklch(0.249 0.03 278.435);
+  --crust: oklch(0.219 0.025 280.657);
+
+  --main-bg: var(--crust);
+  --text-primary: var(--text);
+  --text-secondary: var(--subtext-0);
+
+
+  --border: var(--overlay-0);
+}

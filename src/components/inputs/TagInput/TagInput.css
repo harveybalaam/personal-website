@@ -4,7 +4,7 @@
 }
 
 .tag-input input {
-  color: var(--text-primary);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   font-family: "JetBrains Mono", ui-monospace, monospace;
   flex-grow: 1;
@@ -24,11 +24,11 @@
 }
 
 div.tag-input-container:hover {
-  border-color: var(--blue-hover);
+  border-color: oklch(from var(--sky) l c h / 75%);
 }
 
 div.tag-input-container:has(input:is(:active, :focus)) {
-  border-color: var(--blue-active);
+  border-color: var(--sky);
 }
 
 .tag-input-dropdown-container {

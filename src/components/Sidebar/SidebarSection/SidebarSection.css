@@ -28,34 +28,34 @@
   font-style: italic;
 }
 
-.container.section-container.orange {
-  --section-active: var(--orange-active);
-  --section-hover: var(--orange-hover);
+.container.section-container.peach {
+  --section-active: var(--peach);
+  --section-hover: oklch(from var(--peach) l c h / 75%);
 }
 
 .container.section-container.pink {
-  --section-active: var(--pink-active);
-  --section-hover: var(--pink-hover);
+  --section-active: var(--pink);
+  --section-hover: oklch(from var(--pink) l c h / 75%);
 }
 
 .container.section-container.purple {
-  --section-active: var(--purple-active);
-  --section-hover: var(--purple-hover);
+  --section-active: var(--mauve);
+  --section-hover: oklch(from var(--mauve) l c h / 75%);
 }
 
 .container.section-container.blue {
-  --section-active: var(--blue-active);
-  --section-hover: var(--blue-hover);
+  --section-active: var(--sky);
+  --section-hover: oklch(from var(--sky) l c h / 75%);
 }
 
 .container.section-container.green {
-  --section-active: var(--green-active);
-  --section-hover: var(--green-hover);
+  --section-active: var(--green);
+  --section-hover: oklch(from var(--green) l c h / 75%);
 }
 
 .container.section-container.yellow {
-  --section-active: var(--yellow-active);
-  --section-hover: var(--yellow-hover);
+  --section-active: var(--yellow);
+  --section-hover: oklch(from var(--yellow) l c h / 75%);
 }
 
 h2.section-title {
