@@ -29,9 +29,10 @@
   --mantle: oklch(0.249 0.03 278.435);
   --crust: oklch(0.219 0.025 280.657);
 
-  --main-bg: var(--crust);
+  --main-bg: var(--mantle);
+
   --text-primary: var(--text);
   --text-secondary: var(--subtext-0);
 
-  --border: var(--overlay-0);
+  --border: var(--surface-1);
 }
