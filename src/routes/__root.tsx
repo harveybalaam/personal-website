@@ -5,7 +5,12 @@ import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 function RootLayout() {
   return (
     <>
-      <div id="root-window"></div>
+      <div id="root-window">
+        <div className="window-row window-row-bordered"></div>
+        <div className="window-row window-row-bordered"></div>
+        <div className="window-row window-row-bordered"></div>
+        <div className="window-row"></div>
+      </div>
       <TanStackRouterDevtools />
     </>
   );
