@@ -31,6 +31,8 @@
 
   --main-bg: var(--mantle);
 
+  --accent: var(--sapphire);
+
   --text-primary: var(--text);
   --text-secondary: var(--subtext-0);
 

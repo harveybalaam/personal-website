@@ -1,0 +1,25 @@
+.tab-link {
+  display: flex;
+  align-items: center;
+  height: 2.25rem;
+  padding: 0 1.5rem 0 1.5rem;
+  background-color: var(--main-bg);
+  color: var(--subtext-0);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.tab-link.tab-link-active {
+  font-weight: bold;
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow:
+    0 3px 0 -1px var(--main-bg),
+    0 1px 0 var(--accent);
+}
+
+.tab-link:not(.tab-link-active):hover {
+  color: var(--subtext-1);
+  background-color: var(--base);
+}

@@ -29,7 +29,9 @@
 }
 
 :root {
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  --font-family: "JetBrains Mono", ui-monospace, monospace;
+
+  font-family: var(--font-family);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,11 +40,8 @@
 html,
 body {
   margin: 0;
-  background-color: var(--crust);
-}
-
-html {
   padding: 0;
+  background-color: var(--crust);
 }
 
 body {
@@ -68,6 +67,43 @@ body {
 
 .window-row.window-row-bordered {
   border-bottom: 1px solid var(--border);
+}
+
+header {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+header > div:has(> nav.tab-group) {
+  display: flex;
+  gap: 2rem;
+}
+
+.tab-group {
+  display: flex;
+  align-self: flex-end;
+  gap: 1rem;
+}
+
+.text-emphasis,
+.text-highlight {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.text-emphasis {
+  color: var(--subtext-0);
+}
+
+.text-highlight {
+  color: var(--accent);
+}
+
+header .text-emphasis,
+header .text-highlight {
+  align-self: center;
 }
 
 .page-content-wrapper {
