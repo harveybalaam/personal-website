@@ -10,6 +10,7 @@ export default defineConfig({
   },
   rules: {
     "eslint/capitalized-comments": "off",
+    "eslint/func-style": "off",
     "eslint/no-magic-numbers": "off",
     "eslint/no-unused-vars": "error",
     "eslint/one-var": "off",

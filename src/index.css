@@ -32,6 +32,7 @@
   --font-family: "JetBrains Mono", ui-monospace, monospace;
 
   font-family: var(--font-family);
+  font-size: 0.875rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,7 +59,7 @@ body {
   background-color: var(--main-bg);
   border: 1px solid var(--border);
   height: 75vh;
-  width: 72vw;
+  width: 70vw;
 }
 
 .window-row {
@@ -67,6 +68,16 @@ body {
 
 .window-row.window-row-bordered {
   border-bottom: 1px solid var(--border);
+}
+
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 header {
@@ -81,6 +92,21 @@ header > div:has(> nav.tab-group) {
   gap: 2rem;
 }
 
+main {
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#page-content {
+  display: flex;
+  flex: 11;
+}
+
+#system-panel {
+  display: flex;
+  flex: 4;
+}
+
 .tab-group {
   display: flex;
   align-self: flex-end;
@@ -89,7 +115,6 @@ header > div:has(> nav.tab-group) {
 
 .text-emphasis,
 .text-highlight {
-  font-size: 0.875rem;
   font-weight: bold;
 }
 
@@ -115,11 +140,6 @@ header .text-highlight {
 .border-default {
   border: 0.15rem solid var(--border);
   border-radius: 0.2rem;
-}
-
-.container {
-  color: var(--text-secondary);
-  padding: 0.75rem;
 }
 
 .centered {

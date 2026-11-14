@@ -1,23 +1,18 @@
 import "./Container.css";
 
 interface ContainerProps extends React.PropsWithChildren {
-  isSidebar?: boolean;
   title: string;
 }
 
-export default function Container({ children, isSidebar = false, title }: ContainerProps) {
-  const sidebarClassModifier = isSidebar ? " sidebar" : "";
-
+export default function Container({ children, title }: ContainerProps) {
   return (
-    <div className={`container border-default${sidebarClassModifier}`}>
+    <div className="container">
       <div className="container-inner">
         <div className="container-title">
-          <h3>{title}</h3>
+          <h2>{title}</h2>
         </div>
-        <div className={`container-content${sidebarClassModifier}`}>
-          {children}
-        </div>
+        <div className={`container-content`}>{children}</div>
       </div>
     </div>
-  )
+  );
 }

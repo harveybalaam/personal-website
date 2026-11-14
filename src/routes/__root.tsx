@@ -1,14 +1,15 @@
-import { createRootRoute } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import { Outlet, createRootRoute } from "@tanstack/react-router";
+import Container from "../components/Container";
 import { Tab } from "../components/tab";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
-// eslint-disable-next-line react-refresh/only-export-components
 function RootLayout() {
   return (
     <>
       <div id="root-window">
         <div className="window-row window-row-bordered">
           <header>
+            <h1 className="sr-only">Harvey Balaam</h1>
             <div>
               <span className="text-highlight">/Users/harveybalaam</span>
               <nav className="tab-group">
@@ -21,7 +22,14 @@ function RootLayout() {
             <span className="text-emphasis">harveybalaam.com</span>
           </header>
         </div>
-        <div className="window-row window-row-bordered"></div>
+        <main className="window-row window-row-bordered">
+          <section id="page-content">
+            <Outlet />
+          </section>
+          <section id="system-panel">
+            <Container title="system" />
+          </section>
+        </main>
         <div className="window-row window-row-bordered"></div>
         <div className="window-row"></div>
       </div>
