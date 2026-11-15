@@ -22,4 +22,5 @@
 .tab-link:not(.tab-link-active):hover {
   color: var(--subtext-1);
   background-color: var(--base);
+  font-weight: bold;
 }
