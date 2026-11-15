@@ -1,5 +1,5 @@
-import { Link, useLocation } from "@tanstack/react-router";
 import "./tab.css";
+import { Link, useLocation } from "@tanstack/react-router";
 
 interface TabProps {
   route: "/" | "/about" | "/links" | "/projects";
@@ -9,12 +9,14 @@ interface TabProps {
 export function Tab({ route, text }: TabProps) {
   const location = useLocation();
   const isActiveTab = location.pathname === route;
+  let className = "tab-link";
+
+  if (isActiveTab) {
+    className += " tab-link-active";
+  }
 
   return (
-    <Link
-      className={`tab-link ${isActiveTab ? "tab-link-active" : ""}`}
-      to={route}
-    >
+    <Link className={className} to={route}>
       {text}
     </Link>
   );
