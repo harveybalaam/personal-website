@@ -92,6 +92,18 @@ header > div:has(> nav.tab-group) {
   gap: 2rem;
 }
 
+.tab-group {
+  align-self: flex-end;
+}
+
+nav.tab-group > ul {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 main {
   gap: 2rem;
   padding: 2rem;
@@ -106,12 +118,6 @@ main {
 #system-panel {
   display: flex;
   flex: 4;
-}
-
-.tab-group {
-  display: flex;
-  align-self: flex-end;
-  gap: 1rem;
 }
 
 .text-emphasis,

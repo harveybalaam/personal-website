@@ -13,10 +13,20 @@ function RootLayout() {
             <div>
               <span className="text-highlight">/Users/harveybalaam</span>
               <nav className="tab-group">
-                <Tab route="/" text="0 index" />
-                <Tab route="/about" text="1 about" />
-                <Tab route="/projects" text="2 projects" />
-                <Tab route="/links" text="3 links" />
+                <ul>
+                  <li>
+                    <Tab route="/" text="0 index" />
+                  </li>
+                  <li>
+                    <Tab route="/about" text="1 about" />
+                  </li>
+                  <li>
+                    <Tab route="/projects" text="2 projects" />
+                  </li>
+                  <li>
+                    <Tab route="/links" text="3 links" />
+                  </li>
+                </ul>
               </nav>
             </div>
             <span className="text-emphasis">harveybalaam.com</span>
