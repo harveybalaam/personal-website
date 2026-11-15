@@ -1,4 +1,5 @@
 import "./index-page.css";
+import { CommandLine } from "../../components/command-line";
 import Container from "../../components/Container";
 
 export function Index() {
@@ -7,7 +8,9 @@ export function Index() {
       <Container title="whoami">
         <div></div>
       </Container>
-      <div></div>
+      <div>
+        <CommandLine command="bat index.txt" />
+      </div>
     </div>
   );
 }

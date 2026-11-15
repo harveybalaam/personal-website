@@ -1,0 +1,5 @@
+.command-line {
+  display: flex;
+  justify-content: space-between;
+  color: var(--overlay-1);
+}
