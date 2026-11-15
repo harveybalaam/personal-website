@@ -1,0 +1,6 @@
+#index-content {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  gap: 2rem;
+  flex: 1;
+}
