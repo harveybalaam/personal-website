@@ -40,7 +40,9 @@ function RootLayout() {
             <Container title="system" />
           </section>
         </main>
-        <div className="window-row window-row-bordered"></div>
+        <div className="window-row window-row-bordered">
+          <span id="vim-mode">-- NORMAL --</span>
+        </div>
         <div className="window-row"></div>
       </div>
       <TanStackRouterDevtools />

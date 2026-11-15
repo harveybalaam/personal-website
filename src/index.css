@@ -138,6 +138,17 @@ header .text-highlight {
   align-self: center;
 }
 
+#vim-mode {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem 0 0.5rem;
+  margin-left: 1px;
+  background-color: var(--accent);
+  color: var(--main-bg);
+  font-weight: bold;
+  outline: 1px solid var(--accent);
+}
+
 .page-content-wrapper {
   margin: 0.75rem;
   height: calc(90vh - 3rem);
