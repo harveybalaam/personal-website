@@ -1,6 +1,37 @@
-#index-content {
+.index-content {
   display: grid;
   grid-template-rows: 1fr 2fr;
   gap: 2rem;
   flex: 1;
+}
+
+.whoami {
+  display: flex;
+}
+
+.whoami > div {
+  flex: 1;
+}
+
+.whoami > div:not(:first-child) {
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.whoami > div:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.whoami h3 {
+  margin-bottom: 1rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 2rem;
+}
+
+.profile dd {
+  margin: 0;
 }

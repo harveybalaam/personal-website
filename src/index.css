@@ -107,6 +107,12 @@ nav.tab-group > ul {
 main {
   gap: 2rem;
   padding: 2rem;
+  overflow-y: hidden;
+}
+
+h3 {
+  font-size: inherit;
+  margin: 0;
 }
 
 #page-content {
