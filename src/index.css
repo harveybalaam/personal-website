@@ -59,7 +59,7 @@ body {
   background-color: var(--main-bg);
   border: 1px solid var(--border);
   height: 75vh;
-  width: 70vw;
+  width: 75vw;
 }
 
 .window-row {
@@ -118,7 +118,7 @@ h3 {
 #page-content {
   display: flex;
   flex-direction: column;
-  flex: 11;
+  flex: 14;
 }
 
 #system-panel {
