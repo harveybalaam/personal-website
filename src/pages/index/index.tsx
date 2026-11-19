@@ -24,8 +24,26 @@ export function Index() {
           <div></div>
         </div>
       </Container>
-      <div>
+      <div className="command-line-row">
         <CommandLine command="bat index.txt" />
+      </div>
+      <div className="command-line-row">
+        <CommandLine command="ls featured-projects" />
+        <ul className="featured-projects">
+          <li>
+            <a
+              href="https://github.com/harveybalaam/distinct-favicons"
+              target="_blank"
+            >
+              distinct-favicons
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/harveybalaam/rigatoni" target="_blank">
+              rigatoni
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

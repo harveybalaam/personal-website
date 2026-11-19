@@ -144,6 +144,12 @@ header .text-highlight {
   align-self: center;
 }
 
+a:not(.tab-link),
+a:not(.tab-link):visited {
+  color: var(--blue);
+  text-decoration: underline;
+}
+
 #vim-mode {
   display: flex;
   align-items: center;

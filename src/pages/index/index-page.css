@@ -1,12 +1,13 @@
 .index-content {
-  display: grid;
-  grid-template-rows: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   flex: 1;
 }
 
 .whoami {
   display: flex;
+  flex: 0 0 auto;
 }
 
 .whoami > div {
@@ -34,4 +35,16 @@
 
 .profile dd {
   margin: 0;
+}
+
+.command-line-row {
+  flex: 1 1 0;
+}
+
+.featured-projects {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
 }
