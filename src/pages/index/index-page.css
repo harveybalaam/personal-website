@@ -5,9 +5,12 @@
   flex: 1;
 }
 
+.index-content .container {
+  flex: 0 0 auto;
+}
+
 .whoami {
   display: flex;
-  flex: 0 0 auto;
 }
 
 .whoami > div {

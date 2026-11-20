@@ -59,7 +59,8 @@ body {
   background-color: var(--main-bg);
   border: 1px solid var(--border);
   height: 75vh;
-  width: 75vw;
+  max-width: 75vw;
+  aspect-ratio: 5 / 3;
 }
 
 .window-row {
